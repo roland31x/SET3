@@ -283,7 +283,7 @@ namespace SET3
             int[] arr = ArrayInputs();
             int cmmdc = arr[0];
             int i = 1;
-            while(cmmdc > -9 && i < arr.Length)
+            while(cmmdc > 1 && i < arr.Length)
             {
                 cmmdc = CMMDC(cmmdc, arr[i]);
                 i++;
