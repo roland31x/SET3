@@ -12,6 +12,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using System.ComponentModel;
+using System.Diagnostics.CodeAnalysis;
 
 namespace SET3
 {
@@ -149,36 +150,36 @@ namespace SET3
                         P16();
                         Finish();
                         break;
-                    //case "17":
-                    //    Start();
-                    //    P17();
-                    //    Finish();
-                    //    break;
-                    //case "18":
-                    //    Start();
-                    //    P18();
-                    //    Finish();
-                    //    break;
-                    //case "19":
-                    //    Start();
-                    //    P19();
-                    //    Finish();
-                    //    break;
-                    //case "20":
-                    //    Start();
-                    //    P20();
-                    //    Finish();
-                    //    break;
-                    //case "21":
-                    //    Start();
-                    //    P21();
-                    //    Finish();
-                    //    break;
-                    //case "22":
-                    //    Start();
-                    //    P22();
-                    //    Finish();
-                    //    break;
+                    case "17":
+                        Start();
+                        P17();
+                        Finish();
+                        break;
+                    case "18":
+                        Start();
+                        P18();
+                        Finish();
+                        break;
+                    case "19":
+                        Start();
+                        P19();
+                        Finish();
+                        break;
+                    case "20":
+                        Start();
+                        P20();
+                        Finish();
+                        break;
+                    case "21":
+                        Start();
+                        P21();
+                        Finish();
+                        break;
+                    case "22":
+                        Start();
+                        P22();
+                        Finish();
+                        break;
                     //case "23":
                     //    Start();
                     //    P3();
@@ -277,6 +278,177 @@ namespace SET3
             Console.WriteLine("Pentru a reveni la meniul de selectie apasati orice buton.");
             Console.ReadKey();
         }
+        private static void P22()
+        {
+            Console.WriteLine("22. Se dau doi vectori v1 si v2.Se cere sa determine intersectia, reuniunea, si diferentele v1 - v2 si v2 - v1(implementarea operatiilor cu multimi).Elementele care se repeta vor fi scrise o singura data in rezultat.");
+
+        }
+        private static void P21()
+        {
+            Console.WriteLine("21. Se dau doi vectori.Se cere sa se determine ordinea lor lexicografica(care ar trebui sa apara primul in dictionar).");
+            Console.WriteLine("v1: ");
+            int[] arr1 = ArrayInputs();
+            Console.WriteLine("v2: ");
+            int[] arr2 = ArrayInputs();
+            for(int i = 0; i < Math.Min(arr1.Length,arr2.Length); i++)
+            {
+                if (arr1[i] > arr2[i])
+                {
+                    Console.WriteLine("v1 > v2");
+                    return;
+                }
+                if (arr1[i] < arr2[i])
+                {
+                    Console.WriteLine("v1 < v2");
+                    return;
+                }
+            }
+            if(arr1.Length > arr2.Length) // [1 , 2 , 3] > [ 1 , 2 ](?) habar nu am cum functioneaza ordinea lexicografica.
+            {
+                Console.WriteLine("v1 > v2");
+                return;
+            }
+            if (arr1.Length < arr2.Length)
+            {
+                Console.WriteLine("v1 < v2");
+                return;
+            }
+            Console.WriteLine("v1 = v2");
+        }
+        private static void P20()
+        {
+            // habar nu am ce inseamna rotirea in cazul sireagurilor pentru cerinta, nici nu stiu ce caut concret
+            Console.WriteLine("20. Se dau doua siraguri de margele formate din margele albe si negre, notate s1, respectiv s2.Determinati numarul de suprapuneri(margea cu margea) a unui sirag peste celalalt astfel incat margelele suprapuse au aceeasi culoare.Siragurile de margele se pot roti atunci cand le suprapunem.");
+            Console.WriteLine("Sireag 1: ");
+            int[] arr1 = ArrayInputs("Binary");
+            Console.WriteLine("Sireag 2: ");
+            int[] arr2 = ArrayInputs("Binary");
+            int sum = 0;
+            if(arr1.Length > arr2.Length)
+            {
+                for(int i = 0; i < arr2.Length; i++)
+                {
+                    Rotate(arr2, 1);
+                    for(int j = 0; j < arr1.Length; j++)
+                    {
+                        sum += IntSearch(arr1, arr2, j);
+                    }                   
+                }
+            }
+            else
+            {
+                for (int i = 0; i < arr1.Length; i++)
+                {
+                    Rotate(arr1, 1);
+                    for (int j = 0; j < arr2.Length; j++)
+                    {
+                        sum += IntSearch(arr2, arr1, j);
+                    }
+                }
+            }
+            Console.WriteLine($"{sum} suprapuneri posibile");
+        }
+        private static void P19()
+        {
+            Console.WriteLine("19. Se da un vector s(vectorul in care se cauta) si un vector p(vectorul care se cauta).Determinati de cate ori apare p in s.De ex.Daca s = [1, 2, 1, 2, 1, 3, 1, 2, 1] si p = [1, 2, 1] atunci p apare in s de 3 ori. (Problema este dificila doar daca o rezolvati cu un algoritm liniar).");
+            int[] s = ArrayInputs();
+            int[] p = ArrayInputs();
+            int sum = 0;
+            for(int i = 0; i < s.Length; i++)
+            {
+                if (s[i] == p[0])
+                {
+                    sum += IntSearch(s, p, i);
+                }
+            }
+            Console.WriteLine($"Vectorul a fost gasit de {sum} ori.");
+        }
+        private static int IntSearch(int[] s, int[] p, int index)
+        {
+            int i = index;
+            int count = 0;
+            if (i + p.Length > s.Length)
+            {
+                return 0;
+            }
+            while (count < p.Length)
+            {              
+                if (s[i] == p[count])
+                {
+                    i++;
+                    count++;
+                    continue;
+                }
+                else return 0;
+            }
+            return 1;
+        }
+        private static void P18()
+        {
+            Console.WriteLine("18. Se da un polinom de grad n ai carui coeficienti sunt stocati intr - un vector.Cel mai putin semnificativ coeficient este pe pozitia zero in vector.Se cere valoarea polinomului intr - un punct x.");
+            Console.Write("Dati gradul polinomului: ");
+            int n = int.Parse(Console.ReadLine());
+            Console.WriteLine("Dati coeficientii polinomului in ordine: ");
+            int[] poly = new int[n + 1];
+            for(int i = 0; i <= n; i++)
+            {
+                Console.Write($"C{i}: ");
+                poly[i] = int.Parse(Console.ReadLine());    
+            }
+            Console.Write("Dati valoarea 'x': ");
+            int x = int.Parse(Console.ReadLine());
+            int polysum = 0;
+            for(int i = 0; i < poly.Length; i++)
+            {
+                polysum += poly[i] * (int)Math.Pow(x, i);
+            }
+            Console.WriteLine($"Suma polinomului dat in punctu {x} este: {polysum}");
+        }
+        private static void P17()
+        {
+            Console.WriteLine("17. Se da un numar n in baza 10 si un numar b. 1 < b < 17.Sa se converteasca si sa se afiseze numarul n in baza b.");
+            Console.Write("Dati numarul de convertit: ");
+            string n = Console.ReadLine();
+            int f = int.Parse(n);
+            Console.WriteLine("Dati baza dorita: ");
+            int b = int.Parse(Console.ReadLine());
+            StringBuilder str = new StringBuilder();
+            do
+            {
+                if(f % b < 10)
+                {
+                    str.Insert(0, f % b);
+                }
+                else
+                {
+                    int r = f % b;
+                    switch (r)
+                    {
+                        case 10:
+                            str.Insert(0, 'a');
+                            break;
+                        case 11:
+                            str.Insert(0, 'b');
+                            break;
+                        case 12:
+                            str.Insert(0, 'c');
+                            break;
+                        case 13:
+                            str.Insert(0, 'd');
+                            break;
+                        case 14:
+                            str.Insert(0, 'e');
+                            break;
+                        case 15:
+                            str.Insert(0, 'f');
+                            break;
+                    }
+                }
+                f /= b;
+            } while (f != 0);
+            Console.WriteLine($"Numarul convertit in baza {b} este: ");
+            Console.Write(str.ToString());            
+        }
         private static void P16()
         {
             Console.WriteLine("16. Se da un vector de n numere naturale.Determinati cel mai mare divizor comun al elementelor vectorului.");
@@ -367,12 +539,43 @@ namespace SET3
         private static void P13()
         {
             Console.WriteLine("13. Sortare prin insertie.Implementati algoritmul de sortare < Insertion Sort >.");
-            throw new NotImplementedException();
+            int[] arr = ArrayInputs();
+            InsertionSort(arr);
+            PrintArray(arr);
+        }
+        public static void InsertionSort(int[] arr)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                int j = i;
+                while (j > 0 && arr[j] < arr[j - 1])
+                {
+                    (arr[j], arr[j - 1]) = (arr[j-1], arr[j]);
+                    j--;
+                }
+            }
         }
         private static void P12()
         {
             Console.WriteLine("12. Sortare selectie.Implementati algoritmul de sortare < Selection Sort >.");
-            throw new NotImplementedException();
+            int[] arr = ArrayInputs();
+            SelectionSort(arr);
+            PrintArray(arr);
+        }
+        public static void SelectionSort(int[] arr)
+        {
+            for (int i = 0; i < arr.Length - 1; i++)
+            {
+                int minIndex = i;
+                for (int j = i + 1; j < arr.Length; j++)
+                {
+                    if (arr[j] < arr[minIndex])
+                    {
+                        minIndex = j;
+                    }
+                }
+                (arr[i], arr[minIndex]) = (arr[minIndex], arr[i]);
+            }
         }
         private static void P11()
         {
@@ -436,15 +639,19 @@ namespace SET3
             Console.Write("Dati 'k': ");
             int k = int.Parse(Console.ReadLine());
             k = k % arr.Length; // evident daca k = lungime atunci rezulta acelasi vector
-            for(int j = 1; j <= k; j++)
+            Rotate(arr, k);
+            Console.WriteLine($"Vector rotit la stanga de {k} ori: ");
+            PrintArray(arr);
+        }
+        public static void Rotate(int[] arr, int k)
+        {
+            for (int j = 1; j <= k; j++)
             {
                 for (int i = 0; i < arr.Length - 1; i++)
                 {
                     (arr[i], arr[i + 1]) = (arr[i + 1], arr[i]);
-                }                
+                }
             }
-            Console.WriteLine($"Vector rotit la stanga de {k} ori: ");
-            PrintArray(arr);
         }
         private static void P8()
         {
@@ -701,6 +908,26 @@ namespace SET3
             foreach (string s in STarray)
             {
                 INTarray[i] = int.Parse(s);
+                i++;
+            }
+            //PrintArray(INTarray);
+            return INTarray;
+        }
+        private static int[] ArrayInputs(string st)
+        {
+            Console.WriteLine("Introduceti elementele vectorului cu ' ' , ',' sau ';' intre elemente! 0 pentru margea alba, 1 pentru neagra.");
+            char[] sep = new char[] { ' ', ',', ';' };
+            string[] STarray = Console.ReadLine().Split(sep, StringSplitOptions.RemoveEmptyEntries);
+            int[] INTarray = new int[STarray.Length];
+            int i = 0;
+            foreach (string s in STarray)
+            {
+                INTarray[i] = int.Parse(s);
+                if (INTarray[i] != 0 && INTarray[i] != 1)
+                {
+                    Console.WriteLine("Input incorect, sireag setat cu o margea alba");
+                    return new int[] { 0 };
+                }
                 i++;
             }
             //PrintArray(INTarray);
