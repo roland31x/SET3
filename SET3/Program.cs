@@ -403,11 +403,47 @@ namespace SET3
 
         private static int[] Combine(int[] arr1, int[] arr2)
         {
-            List<int> ints = new List<int>();
-            foreach (int i in arr1) ints.Add(i);
-            foreach (int i in arr2) ints.Add(i);
-            int[] ToReturn = ints.ToArray();
-            InsertionSort(ToReturn); 
+            //List<int> ints = new List<int>();
+            //foreach (int i in arr1) ints.Add(i);
+            //foreach (int i in arr2) ints.Add(i);  // in cazul in care algoritmul de mai jos nu functioneaza corespunzator ( am testat ar trebui sa functioneze ).
+
+            //int[] ToReturn = ints.ToArray();
+            //InsertionSort(ToReturn);
+            //return ToReturn;
+
+            int[] ToReturn = new int[arr1.Length + arr2.Length];
+            int a1 = 0;
+            int a2 = 0;
+            for (int i = 0; i < ToReturn.Length; i++)
+            {
+                try
+                {
+                    if (arr1[a1] >= arr2[a2])
+                    {
+                        ToReturn[i] = arr2[a2];
+                        a2++;
+                        continue;
+                    }
+                    if (arr1[a1] < arr2[a2])
+                    {
+                        ToReturn[i] = arr1[a1];
+                        a1++;
+                    }
+                }
+                catch (IndexOutOfRangeException)
+                {
+                    if (a2 >= arr2.Length)
+                    {
+                        ToReturn[i] = arr1[a1];
+                        a1++;
+                    }
+                    else
+                    {
+                        ToReturn[i] = arr2[a2];
+                        a2++;
+                    }
+                }
+            }
             return ToReturn;
         }
 
