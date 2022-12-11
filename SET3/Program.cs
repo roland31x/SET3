@@ -180,51 +180,51 @@ namespace SET3
                         P22();
                         Finish();
                         break;
-                    //case "23":
-                    //    Start();
-                    //    P3();
-                    //    Finish();
-                    //    break;
-                    //case "24":
-                    //    Start();
-                    //    P4();
-                    //    Finish();
-                    //    break;
-                    //case "25":
-                    //    Start();
-                    //    P5();
-                    //    Finish();
-                    //    break;
-                    //case "26":
-                    //    Start();
-                    //    P6();
-                    //    Finish();
-                    //    break;
-                    //case "27":
-                    //    Start();
-                    //    P7();
-                    //    Finish();
-                    //    break;
-                    //case "28":
-                    //    Start();
-                    //    P8();
-                    //    Finish();
-                    //    break;
-                    //case "29":
-                    //    Start();
-                    //    P9();
-                    //    Finish();
-                    //    break;
-                    //case "30":
-                    //    Start();
-                    //    P10();
-                    //    Finish();
-                    //    break;
-                    //case "31":
-                    //    Start();
-                    //    P11();
-                    //    Finish();
-                    //    break;
+                    case "23":
+                        Start();
+                        P23();
+                        Finish();
+                        break;
+                    case "24":
+                        Start();
+                        P24();
+                        Finish();
+                        break;
+                    case "25":
+                        Start();
+                        P25();
+                        Finish();
+                        break;
+                    case "26":
+                        Start();
+                        P26();
+                        Finish();
+                        break;
+                    case "27":
+                        Start();
+                        P27();
+                        Finish();
+                        break;
+                    case "28":
+                        Start();
+                        P28();
+                        Finish();
+                        break;
+                    case "29":
+                        Start();
+                        P29();
+                        Finish();
+                        break;
+                    case "30":
+                        Start();
+                        P30();
+                        Finish();
+                        break;
+                    case "31":
+                        Start();
+                        P31();
+                        Finish();
+                        break;
                     default:
                         Console.WriteLine("Valoarea introdusa nu apartine criteriului cerut, apasa orice buton pentru a reveni la meniul de selectie!");
                         Console.ReadKey();
@@ -260,15 +260,15 @@ namespace SET3
             Console.WriteLine("20. Se dau doua siraguri de margele formate din margele albe si negre, notate s1, respectiv s2.Determinati numarul de suprapuneri(margea cu margea) a unui sirag peste celalalt astfel incat margelele suprapuse au aceeasi culoare.Siragurile de margele se pot roti atunci cand le suprapunem.");
             Console.WriteLine("21. Se dau doi vectori.Se cere sa se determine ordinea lor lexicografica(care ar trebui sa apara primul in dictionar).");
             Console.WriteLine("22. Se dau doi vectori v1 si v2.Se cere sa determine intersectia, reuniunea, si diferentele v1 - v2 si v2 - v1(implementarea operatiilor cu multimi).Elementele care se repeta vor fi scrise o singura data in rezultat.");
-            Console.WriteLine("24. Aceleasi cerinte ca si la problema anterioara dar de data asta elementele din v1 respectiv v2  sunt in ordine strict crescatoare.");
-            Console.WriteLine("25. Aceleasi cerinte ca si la problema anterioara dar de data asta elementele sunt stocate ca vectori cu valori binare(v[i] este 1 daca i face parte din multime si este 0 in caz contrar).");
-            Console.WriteLine("26. (Interclasare) Se dau doi vector sortati crescator v1 si v2.Construiti un al treilea vector ordonat crescator format din toate elementele din  v1 si v2.Sunt permise elemente duplicate.");
-            Console.WriteLine("27. Se dau doua numere naturale foarte mari(cifrele unui numar foarte mare sunt stocate intr - un vector - fiecare cifra pe cate o pozitie).Se cere sa se determine suma, diferenta si produsul a doua astfel de numere.");
-            Console.WriteLine("28. Se da un vector si un index in vectorul respectiv.Se cere sa se determine valoarea din vector care va fi pe pozitia index dupa ce vectorul este sortat.");
-            Console.WriteLine("29. Quicksort.Sortati un vector folosind metoda QuickSort.");
-            Console.WriteLine("30. MergeSort.Sortati un vector folosind metoda MergeSort.");
-            Console.WriteLine("31. Sortare bicriteriala.Se dau doi vectori de numere intregi E si W, unde E[i] este un numar iar W[i] este un numar care reprezinta ponderea lui E[i].Sortati vectorii astfel incat elementele lui E sa fie in in ordine crescatoare iar pentru doua valori egale din E, cea cu pondere mai mare va fi prima.");
-            Console.WriteLine("32. (Element majoritate).Intr - un vector cu n elemente, un element m este element majoritate daca mai mult de n / 2 din valorile vectorului sunt egale cu m(prin urmare, daca un vector are element majoritate acesta este unui singur).Sa se determine elementul majoritate al unui vector(daca nu exista atunci se va afisa < nu exista >). (incercati sa gasiti o solutie liniara).");
+            Console.WriteLine("23. Aceleasi cerinte ca si la problema anterioara dar de data asta elementele din v1 respectiv v2  sunt in ordine strict crescatoare.");
+            Console.WriteLine("24. Aceleasi cerinte ca si la problema anterioara dar de data asta elementele sunt stocate ca vectori cu valori binare(v[i] este 1 daca i face parte din multime si este 0 in caz contrar).");
+            Console.WriteLine("25. (Interclasare) Se dau doi vector sortati crescator v1 si v2.Construiti un al treilea vector ordonat crescator format din toate elementele din  v1 si v2.Sunt permise elemente duplicate.");
+            Console.WriteLine("26. Se dau doua numere naturale foarte mari(cifrele unui numar foarte mare sunt stocate intr - un vector - fiecare cifra pe cate o pozitie).Se cere sa se determine suma, diferenta si produsul a doua astfel de numere.");
+            Console.WriteLine("27. Se da un vector si un index in vectorul respectiv.Se cere sa se determine valoarea din vector care va fi pe pozitia index dupa ce vectorul este sortat.");
+            Console.WriteLine("28. Quicksort.Sortati un vector folosind metoda QuickSort.");
+            Console.WriteLine("29. MergeSort.Sortati un vector folosind metoda MergeSort.");
+            Console.WriteLine("30. Sortare bicriteriala.Se dau doi vectori de numere intregi E si W, unde E[i] este un numar iar W[i] este un numar care reprezinta ponderea lui E[i].Sortati vectorii astfel incat elementele lui E sa fie in in ordine crescatoare iar pentru doua valori egale din E, cea cu pondere mai mare va fi prima.");
+            Console.WriteLine("31. (Element majoritate).Intr - un vector cu n elemente, un element m este element majoritate daca mai mult de n / 2 din valorile vectorului sunt egale cu m(prin urmare, daca un vector are element majoritate acesta este unui singur).Sa se determine elementul majoritate al unui vector(daca nu exista atunci se va afisa < nu exista >). (incercati sa gasiti o solutie liniara).");
 
             Console.Write("Introduceti un numar de la 1 la 32 sau 'exit' pentru a iesi din aplicatie: ");
         }
@@ -278,11 +278,278 @@ namespace SET3
             Console.WriteLine("Pentru a reveni la meniul de selectie apasati orice buton.");
             Console.ReadKey();
         }
+        private static void P31()
+        {
+            Console.WriteLine("31. (Element majoritate).Intr - un vector cu n elemente, un element m este element majoritate daca mai mult de n / 2 din valorile vectorului sunt egale cu m(prin urmare, daca un vector are element majoritate acesta este unui singur).Sa se determine elementul majoritate al unui vector(daca nu exista atunci se va afisa < nu exista >). (incercati sa gasiti o solutie liniara).");
+            int[] arr = ArrayInputs();
+            List<int> candidatesList = new List<int>();
+            int[,] candidates = new int[arr.Length,arr.Length];
+            for(int i = 0; i < arr.Length; i++)
+            {
+                if (candidatesList.Contains(arr[i]))
+                candidatesList.Add(arr[i]);
+            }
+        }
+        private static void P30()
+        {
+            Console.WriteLine("30. Sortare bicriteriala.Se dau doi vectori de numere intregi E si W, unde E[i] este un numar iar W[i] este un numar care reprezinta ponderea lui E[i].Sortati vectorii astfel incat elementele lui E sa fie in in ordine crescatoare iar pentru doua valori egale din E, cea cu pondere mai mare va fi prima.");
+            Console.WriteLine("E : ");
+            int[] E = ArrayInputs();
+            Console.WriteLine("W : ");
+            int[] W = ArrayInputs();
+            if (E.Length != W.Length)
+            {
+                Console.WriteLine("Vectori nu au voie sa aiba lungimi diferite");
+                return;
+            }
+            for (int i = 0; i < E.Length; i++)    // insertion sort pe E, si sortare W astfel incat elementele sa isi retina ponderea pe index.
+            {
+                int j = i;
+                while (j > 0 && E[j] < E[j - 1])
+                {
+                    (E[j], E[j - 1]) = (E[j - 1], E[j]);
+                    (W[j], W[j - 1]) = (W[j - 1], W[j]);
+                    j--;
+                }
+            }
+            for (int i = 0; i < E.Length; i++)  // insertion sort bazat pe W, in care sortam elementele din E si W dupa ponderea din W ale elementelor egale.
+            {
+                int j = i;
+                while (j > 0 && W[j] > W[j - 1] && E[j] == E[j - 1])
+                {
+                    (E[j], E[j - 1]) = (E[j - 1], E[j]);
+                    (W[j], W[j - 1]) = (W[j - 1], W[j]);
+                    j--;
+                }
+            }
+            Console.WriteLine("E sortat cu ponderea elementelor din W: ");
+            PrintArray(E);
+            PrintArray(W);
+        }
+        private static void P29()
+        {
+            Console.WriteLine("29. MergeSort.Sortati un vector folosind metoda MergeSort.");
+            int[] arr = ArrayInputs();
+            MergeSort(arr);
+            PrintArray(arr);
+        }
+        private static void MergeSort(int[] arr)
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void P28()
+        {
+            Console.WriteLine("28. Quicksort.Sortati un vector folosind metoda QuickSort.");
+            int[] arr = ArrayInputs();
+            QuickSort(arr);
+            PrintArray(arr);
+        }
+
+        private static void QuickSort(int[] arr)
+        {
+            QuickSort(arr, 0, arr.Length - 1);
+        }
+        public static readonly Random rnd = new Random();
+        private static void QuickSort(int[] v, int lo , int hi)
+        {
+            if (lo < hi)
+            {
+                int index;
+                index = rnd.Next(lo, hi + 1);
+                (v[lo], v[index]) = (v[index], v[lo]);
+                int k = lo;
+                for (int i = lo + 1; i <= hi; i++)
+                    if (v[i] < v[lo])
+                    {
+                        k++;
+                        (v[k], v[i]) = (v[i], v[k]);
+                    }
+                (v[lo], v[k]) = (v[k], v[lo]);
+
+                QuickSort(v, lo, k - 1);
+                QuickSort(v, k + 1, hi);
+            }
+        }
+
+        private static void P27()
+        {
+            Console.WriteLine("27. Se da un vector si un index in vectorul respectiv.Se cere sa se determine valoarea din vector care va fi pe pozitia index dupa ce vectorul este sortat.");
+            int[] arr = ArrayInputs();
+            Console.Write("Dati indexul: ");
+            int index = int.Parse(Console.ReadLine());
+            if(index >= arr.Length)
+            {
+                Console.WriteLine("Index introdus gresit.");
+                return;
+            }
+            InsertionSort(arr);
+            Console.WriteLine($"{arr[index]} este valoarea care se gaseste pe pozitia {index} dupa sortare.");
+
+        }
+        private static void P26()
+        {
+            Console.WriteLine("26. Se dau doua numere naturale foarte mari(cifrele unui numar foarte mare sunt stocate intr - un vector - fiecare cifra pe cate o pozitie).Se cere sa se determine suma, diferenta si produsul a doua astfel de numere.");
+            // folosinduma de bigintegerul meu din NumarMare.cs
+            NumarMare V1 = new NumarMare(Console.ReadLine());
+            NumarMare V2 = new NumarMare(Console.ReadLine());
+            Console.WriteLine("V1 + V2 = ");
+            Console.WriteLine(V1 + V2);
+            Console.WriteLine("V1 - V2 = ");
+            Console.WriteLine(V1 - V2);
+            Console.WriteLine("V1 * V2 = ");
+            Console.WriteLine(V1 * V2);
+        }
+        private static void P25()
+        {
+            Console.WriteLine("25. (Interclasare) Se dau doi vector sortati crescator v1 si v2.Construiti un al treilea vector ordonat crescator format din toate elementele din  v1 si v2.Sunt permise elemente duplicate.");
+            int[] arr1 = ArrayInputs();
+            InsertionSort(arr1);
+            int[] arr2 = ArrayInputs();
+            SelectionSort(arr2);
+            int[] interclasat = Combine(arr1, arr2);
+            PrintArray(interclasat);
+        }
+
+        private static int[] Combine(int[] arr1, int[] arr2)
+        {
+            List<int> ints = new List<int>();
+            foreach (int i in arr1) ints.Add(i);
+            foreach (int i in arr2) ints.Add(i);
+            int[] ToReturn = ints.ToArray();
+            InsertionSort(ToReturn); 
+            return ToReturn;
+        }
+
+        private static void P24()
+        {
+            Console.WriteLine("v1 : ");
+            int[] arr1 = ArrayInputs("VectorBinar");
+            Console.WriteLine("v2 : ");
+            int[] arr2 = ArrayInputs("VectorBinar");
+            Console.WriteLine("v1 U v2 :");
+            int[] reunion = ReunionBinar(arr1, arr2);
+            PrintArray(reunion);
+            Console.WriteLine("v1 ∩ v2 :");
+            int[] intersection = IntersectionBinar(arr1, arr2);
+            PrintArray(intersection);
+            Console.WriteLine(@"v1 \ v2 :");
+            int[] difference1 = DifferenceBinar(arr1, arr2);
+            PrintArray(difference1);
+            Console.WriteLine(@"v2 \ v1 :");
+            int[] difference2 = DifferenceBinar(arr2, arr1);
+            PrintArray(difference2);
+        }
+        public static int[] ReunionBinar(int[] arr1, int[] arr2)
+        {
+            int[] ToReturn = new int[Math.Max(arr1.Length, arr2.Length)];
+            for(int i = 0; i < arr1.Length; i++)
+            {
+                if (arr1[i] == 1)
+                {
+                    ToReturn[i] = 1;
+                }
+            }
+            for (int i = 0; i < arr2.Length; i++)
+            {
+                if (arr2[i] == 1)
+                {
+                    ToReturn[i] = 1;
+                }
+            }
+            return ToReturn;
+        }
+        public static int[] IntersectionBinar(int[] arr1, int[] arr2)
+        {
+            int[] ToReturn = new int[Math.Min(arr1.Length, arr2.Length)];
+            for (int i = 0; i < Math.Min(arr1.Length, arr2.Length); i++)
+            {
+                if (arr1[i] == 1 && arr2[i] == 1)
+                {
+                    ToReturn[i] = 1;
+                }
+            }
+            return ToReturn;
+        }
+        public static int[] DifferenceBinar(int[] arr1, int[] arr2)
+        {
+            int[] ToReturn = new int[Math.Max(arr1.Length, arr2.Length)];
+            for (int i = 0; i < Math.Min(arr1.Length, arr2.Length); i++)
+            {
+                if (arr1[i] == 1 && arr2[i] == 0)
+                {
+                    ToReturn[i] = 1;
+                }
+            }
+            if(arr1.Length > arr2.Length)
+            {
+                int i = arr2.Length;
+                while( i < arr1.Length)
+                {
+                    ToReturn[i] = 1;
+                    i++;
+                }
+            }
+            return ToReturn;
+        }
+        private static void P23()
+        {
+            P22(); // nu inteleg ce diferenta face daca elementele sunt in ordine crescatoare (?)
+        }
         private static void P22()
         {
             Console.WriteLine("22. Se dau doi vectori v1 si v2.Se cere sa determine intersectia, reuniunea, si diferentele v1 - v2 si v2 - v1(implementarea operatiilor cu multimi).Elementele care se repeta vor fi scrise o singura data in rezultat.");
+            Console.WriteLine("v1 : ");
+            int[] arr1 = ArrayInputs();
+            Console.WriteLine("v2 : ");
+            int[] arr2 = ArrayInputs();
+            Console.WriteLine("v1 U v2 :");
+            int[] reunion = Reunion(arr1, arr2);
+            PrintArray(reunion);
+            Console.WriteLine("v1 ∩ v2 :");
+            int[] intersection = Intersection(arr1, arr2);       
+            PrintArray(intersection);
+            Console.WriteLine(@"v1 \ v2 :");
+            int[] difference1 = Difference(arr1, arr2);
+            PrintArray(difference1);
+            Console.WriteLine(@"v2 \ v1 :");
+            int[] difference2 = Difference(arr2, arr1);
+            PrintArray(difference2);
 
         }
+
+        private static int[] Difference(int[] arr1, int[] arr2)
+        {
+            SortedSet<int> ints = new SortedSet<int>();
+            foreach(int i in arr1) ints.Add(i);
+            foreach (int i in arr2) ints.Remove(i);
+            return ints.ToArray();
+        }
+
+        private static int[] Intersection(int[] arr1, int[] arr2)
+        {
+            SortedSet<int> ints = new SortedSet<int>();
+            for(int i = 0; i < arr1.Length; i++)
+            {
+                for(int j = 0; j < arr2.Length; j++)
+                {
+                    if (arr1[i] == arr2[j])
+                    {
+                        ints.Add(arr1[i]);
+                    }
+                }
+            }
+            return ints.ToArray();
+        }
+
+        private static int[] Reunion(int[] arr1, int[] arr2)
+        {
+            SortedSet<int> ints= new SortedSet<int>();
+            foreach(int i in arr1) ints.Add(i);
+            foreach(int i in arr2) ints.Add(i);
+            return ints.ToArray();
+        }
+
         private static void P21()
         {
             Console.WriteLine("21. Se dau doi vectori.Se cere sa se determine ordinea lor lexicografica(care ar trebui sa apara primul in dictionar).");
@@ -915,23 +1182,43 @@ namespace SET3
         }
         private static int[] ArrayInputs(string st)
         {
-            Console.WriteLine("Introduceti elementele vectorului cu ' ' , ',' sau ';' intre elemente! 0 pentru margea alba, 1 pentru neagra.");
             char[] sep = new char[] { ' ', ',', ';' };
-            string[] STarray = Console.ReadLine().Split(sep, StringSplitOptions.RemoveEmptyEntries);
-            int[] INTarray = new int[STarray.Length];
-            int i = 0;
-            foreach (string s in STarray)
+            switch (st) 
             {
-                INTarray[i] = int.Parse(s);
-                if (INTarray[i] != 0 && INTarray[i] != 1)
-                {
-                    Console.WriteLine("Input incorect, sireag setat cu o margea alba");
-                    return new int[] { 0 };
-                }
-                i++;
+                case "Binary":
+                    Console.WriteLine("Introduceti elementele vectorului cu ' ' , ',' sau ';' intre elemente! 0 pentru margea alba, 1 pentru neagra.");
+                    
+                    string[] STarray = Console.ReadLine().Split(sep, StringSplitOptions.RemoveEmptyEntries);
+                    int[] INTarray = new int[STarray.Length];
+                    int i = 0;
+                    foreach (string s in STarray)
+                    {
+                        INTarray[i] = int.Parse(s);
+                        if (INTarray[i] != 0 && INTarray[i] != 1)
+                        {
+                            Console.WriteLine("Input incorect, sireag setat cu o margea alba");
+                            return new int[] { 0 };
+                        }
+                        i++;
+                    }
+                    //PrintArray(INTarray);
+                    return INTarray;
+                case "VectorBinar":
+                    Console.WriteLine("Introduceti elementele vectorului cu ' ' , ',' sau ';' intre elemente!");
+                    string[] strings = Console.ReadLine().Split(sep, StringSplitOptions.RemoveEmptyEntries);
+                    List<int> ints = new List<int>();
+                    for(int j = 0; j < strings.Length; j++)
+                    {
+                        ints.Add(int.Parse(strings[j]));
+                    }
+                    int[] ints1 = new int[ints.Max() + 1];
+                    foreach(int nr in ints)
+                    {
+                        ints1[nr] = 1;
+                    }
+                    return ints1;                   
             }
-            //PrintArray(INTarray);
-            return INTarray;
+            return new int[] { 0 }; // nu se intampla
         }
     }
 }
